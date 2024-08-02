@@ -1,0 +1,512 @@
+:root{
+    --col1:#0A0C0E;
+    --col2:#272B2D;
+    --col3:#FE9C3E;
+}
+
+body{
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+    font: 1rem;
+    font-weight: 400;
+    color:#272B2D;
+    height: 100%;
+}
+
+*{
+    outline: none;
+    transition: 0.4s;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width:1200px){
+    .container{
+        padding: 0 100px;
+    }
+}
+
+
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: "roboto", serif;
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+.orange-titles{
+    font-family: "Playwrite BE VLG", cursive;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    color:var(--col3)
+}
+.div-titles{
+    font-family: "PT Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 60px;
+}
+
+#header-container{
+    height: calc(100vh);
+    /* background: var(--col1); */
+    color: #fff;
+    background-image: url('./images/banner-background.png');
+    background-repeat: repeat;
+    background-size: 550px 550px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+header .container{
+    text-align: left;
+}
+
+header ul li {
+    display: inline-block;
+    /* padding: 20px; */
+   
+}
+header a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 20px;
+}
+
+header .logo-text{
+    color: var(--col3);
+    font-family: "Sedgwick Ave Display", cursive;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.nav-menu a{
+    color: #fff;
+}
+
+@media only screen and (min-width:950px) and (max-width: 1200px) {
+    header .logo-text{
+               font-size: 1.5rem;
+
+    }
+    header a{
+        font-size: 1rem;
+    }
+    
+}
+@media only screen and (min-width:650px) and (max-width: 950px) {
+
+    header .logo-text{
+        font-size: 1.5rem;
+
+    }
+    header a{
+        font-size: 1rem;
+    }
+    
+}
+
+
+#home{
+    color: #fff;
+    flex: 5;
+}
+#home .container{
+    padding-bottom: 300px;
+    padding-top: 50px;
+}
+.banner-description{
+ max-width: 450px;
+ transform: translateY(50px);
+ transition: transform 4s ease;
+} 
+.banner-description.visible{
+    transform: translateY(0px);
+}
+
+
+
+.banner-description h1{
+    font-family: "PT Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 5rem;
+}
+.banner-description p{
+    font-size: 2.5rem;
+    color: #AAAAAA;
+}
+.banner-description span{
+    color: #C6342E;
+}
+.banner-img{
+
+}
+.banner-img .banner-pizza{
+    height:600px;
+    /* overflow: hidden; */
+    z-index: 1;
+    animation: spin 100s linear infinite;
+}
+
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.banner-leaf{
+    height: 300px;
+    margin-left: -180px;
+    align-items: center;
+    justify-content: center;
+}
+
+.drop-items{
+    z-index: 1;
+    transform: translateY(-150px);
+    transition: transform 1.5s ease;
+}
+
+.drop-items.visible{
+    transform: translateY(0px);
+}
+
+.banner-red-chilly{
+    height:120px;
+    margin-top:500px;
+    margin-left: -180px;
+    transform: rotate(120deg);
+}
+
+
+.banner-red-chilly2{
+    height:100px;
+    margin-top:520px;
+    margin-left: -250px;
+    transform: rotate(120deg);
+   
+}
+
+@media only screen and (min-width:950px) and (max-width: 1200px) {
+    #home .container{
+        padding: 0 100px;
+    }
+
+    .banner-img .banner-pizza{
+        height:500px;
+        
+    }
+    .banner-description{
+        margin-top: -100px;
+    }
+    .banner-description h1{
+        font-size: 4rem;
+    
+    }
+    .banner-red-chilly{
+        height:100px;
+        margin-top:450px;
+    }
+    .banner-red-chilly2{
+        height:100px;
+        margin-top:450px;
+    }
+    
+}
+@media only screen and (min-width:650px) and (max-width: 950px) {
+    #home .container{
+        padding: 0 100px;
+    }
+
+    .banner-img .banner-pizza{
+        height:300px;
+        
+    }
+    .banner-description{
+        /* margin-top: -100px; */
+    }
+    .banner-description h1{
+        font-size: 3rem;
+    
+    }
+    .banner-red-chilly{
+        height:70px;
+        margin-top:300px;
+        margin-left: -150px;
+    }
+    .banner-red-chilly2{
+        height:70px;
+        margin-top:300px;
+        margin-left: -150px;
+    }
+    
+}
+
+
+.info-top{
+    position: relative;
+    /* height: 100px; */
+    top:-140px;
+    
+}
+
+
+.info-top img{
+    width: 100%;
+    /* max-height: 100%;  */
+    overflow: hidden;
+    height:150px;
+}
+
+#special-info{
+    height:500px;
+    background-color: var(--col3);
+    max-width: 100%;
+}
+
+#special-info .container{
+    text-align: center;
+    font-size: 36px;
+    font-style: italic;
+    height: 100px;
+    padding:0 20px;
+}
+@media only screen and (min-width:950px) and (max-width: 1200px) {
+
+    #special-info .container{
+
+        font-size: 24px;
+    }
+    
+}
+@media only screen and (min-width:650px) and (max-width: 950px) {
+
+    #special-info .container{
+        font-size: 18px;
+    }
+    
+}
+
+.info-bottom{
+    top:200px;
+    height:100px;
+    position: relative;
+}
+
+.info-bottom Img{
+    width: 100%;
+    /* max-height: 100%;  */
+    overflow: hidden;
+    height:150px;
+
+}
+
+#menu{
+    background: var(--col1);
+    /* height: 00px; */
+    padding-top: 200px;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 200px;
+}
+
+#menu .menu-items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-items .menu-card{
+    border: 1px solid #fff;
+    border-radius: 30px;
+    width: 300px;
+    padding: 10px;
+    margin: 10px 10px;
+    
+    
+}
+.menu-card img{
+    width:200px;
+    transition: transform 2s ease;;
+}
+.menu-card:hover >img{
+    /* animation: spiral 10s linear; */
+    
+    transform: rotate(60deg);
+}
+
+@keyframes spiral {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(120deg);
+    }
+    
+}
+
+.menu-card h3{
+    padding-bottom: 10px;
+    font-weight: 3rem;
+}
+.menu-card p{
+    color: #AAAAAA;
+    font-weight: 100;
+}
+
+.white-bottom-mess{
+    width: 100%;
+    height: 150px;
+    top: 10px;
+    display: block;
+}
+
+#chef{
+    /* padding-top: 100px; */
+    text-align: center;
+    position: relative;
+}
+.chef-top{
+    top: -100px;
+    /* height: 200px; */
+    position: relative;
+}
+
+.chef-list{
+    display: flex;
+    padding-bottom: 200px;
+}
+
+.chef-card img{
+    width: 350px;
+    height: 250px;
+}
+
+@media only screen and (min-width:950px) and (max-width: 1200px) {
+    .chef-card img{
+        width: 260px;
+        height: 200px;
+    }
+    #chef .container .flex{
+        flex-direction: row;
+    }
+    
+}
+@media only screen and (min-width:650px) and (max-width: 950px) {
+    .chef-card img{
+        width: 260px;
+        height: 200px;
+    }
+    #chef .container .flex{
+        flex-direction: column;
+    }
+    
+}
+
+#ourstory{
+    padding: 100px 0;
+    background: #F0F0F0;
+    text-align: center;
+}
+
+
+.reveal{
+    overflow: hidden;
+}
+.signature{
+    margin-top: 100px;
+    width: 180px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 1s ease, transform 1s ease;
+
+}
+.signature.visible{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.underline{
+    height: 5px;
+    width:10px;
+    border-bottom: 3px solid #000;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    /* transform: translateX(20px); */
+    transition: width 1s ease,tranform 1s ease;
+}
+.underline.visible{
+    width: 200px;
+}
+
+#footer{
+    background-color: var(--col1);
+    text-align: center;
+    height: 300px;
+    color:white;
+}
+#footer .flex{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer .container{
+    height: 300px;
+}
